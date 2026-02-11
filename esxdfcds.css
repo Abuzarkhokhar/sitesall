@@ -169,9 +169,9 @@ transition: .3s ease-in-out;
     aspect-ratio: 1;
     border: .4rem solid var(---green-clr);
     border-radius: 50%;
-background-image: url(WIN_20251203_12_13_14_Pro\ \(2\).jpg);
+background-image: url(WIN_20260211_18_27_19_Pro\ \(2\).jpg);
 background-position: bottom;
-background-size: 178%;
+background-size: 115%;
 background-repeat: no-repeat;
 margin-right: 3rem;
 position: relative;
@@ -230,7 +230,6 @@ z-index: -1;
         transition: .5s ease-in-out;
     }
     .working-area{
-        
         width: 85%;
     }
     .hero-section{
