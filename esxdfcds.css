@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+    ---white-clr:#fff;
+    ---black-clr:#000;
+    ---gray-clr:#ECECEC;
+    ---green-clr:#53ceaf;
+}
+
+.main-wrapper{
+    min-height: 100vh;
+background-color:var(---black-clr);
+}
+.working-area{
+    width: 80%;
+    margin: auto;
+}
+.logo{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+span{
+    color: var(---green-clr);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navlist{
+    display: flex;
+    gap: 3rem;
+}
+.navbar{
+    display: flex;
+ justify-content: space-between;
+    align-items: center;
+height: 14vh;
+}
+.navlinks{
+    color: white;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .08rem;
+    position: relative;
+}
+.active{
+    color: var(---green-clr);
+}
+.navlinks::before,
+.active::before{
+    content: '';
+    position: absolute;
+    background: var(---green-clr);
+    width: 0;
+    height: .1rem;
+    bottom: -10px;
+transition: .5s ease-in-out;
+}
+.active::before{
+width: 100%;
+}
+.navlinks:hover::before{
+    width: 100%;
+}
+.navlinks:hover{
+    color: var(---green-clr);
+    transition: .5s ease-in-out;
+}
+.fa-bars{
+    color: var(---white-clr);
+    font-size: 1.7rem;
+}
+/* Hero Secction */
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 14vh);
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    isolation: isolate;
+    overflow: hidden;
+}
+h4{
+    color: var(---white-clr);
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+.circle{
+      background: var(---green-clr);
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.title{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+h1{
+    color: var(---white-clr);
+    font-size: 5rem;
+    letter-spacing: .6rem;
+    line-height: 6rem;
+}
+p{
+    color: var(---gray-clr);
+    font-size: 1em;
+    max-width: 600px;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-block: 1.5rem;
+}
+.btn-container{
+    display: flex;
+    gap: 1.5rem;
+    margin-block: 2rem;
+}
+button{
+    background: var(---green-clr);
+    color: var(---white-clr);
+    border: .1em solid var(---green-clr);
+    padding: .8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.border-btn{
+    background: transparent;
+}
+.border-btn:hover{
+    background: var(---green-clr);
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+}
+.social-icons{
+    display: flex;
+    gap: 1rem;
+}
+.fa-brands{
+    color: var(---white-clr);
+    font-size: 1.2rem;
+}
+.icons{
+    background: var(---green-clr);
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    line-height: 40px;
+ text-align: center;
+transition: .3s ease-in-out; 
+}
+.icons:hover{
+    transform: translateY(-20%);
+
+}
+.image-container{
+    width: 40rem;
+    aspect-ratio: 1;
+    border: .4rem solid var(---green-clr);
+    border-radius: 50%;
+background-image: url(WIN_20251203_12_13_14_Pro\ \(2\).jpg);
+background-position: bottom;
+background-size: 178%;
+background-repeat: no-repeat;
+margin-right: 3rem;
+position: relative;
+}
+.glow{
+    width: 17rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+background: var(---green-clr);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+filter: blur(100px);
+z-index: -1;
+}
+.image-container::before{
+    content: '';
+    position: absolute;
+    inset: -1rem; 
+    border-radius: inherit;
+    border: 1.1rem dotted var(---green-clr);
+    animation:rotation 13s linear infinite;
+    /* margin-right: 3rem; */
+}
+.image-container::after{
+    content: '';
+    position: absolute;
+    inset: -1.7rem;
+    border-radius: inherit;
+    border: .48rem dotted var(---green-clr);
+    animation:rotation 15s linear infinite reverse;
+/* margin-right: 3rem; */
+}
+@keyframes rotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.humburge{
+    display: none;
+    z-index: 5;
+}
+@media screen and (max-width:680px) {
+    .navlist{
+        flex-direction: column;
+        justify-content: center;
+        background: var(---green-clr);
+        position: absolute;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 80vh;
+        align-items: center;
+        z-index:  4;
+        transition: .5s ease-in-out;
+    }
+    .working-area{
+        
+        width: 85%;
+    }
+    .hero-section{
+flex-direction: column;
+overflow: scroll;
+scrollbar-width: none; 
+margin-top: 3rem;
+}
+.image-container{
+    width: 15rem;
+  margin-left: 1.4rem;
+}
+.humburge{
+    display: block;
+
+}
+h1{
+    font-size: 4rem;
+    line-height: 5rem;
+}
+p{
+    font-size: .95rem;
+    margin-top: 1rem;
+}
+.navlist-active{
+    top: 0;
+}
+.active,
+.navlinks:hover{
+    color: var(---black-clr);
+}
+.navlinks::before{
+    background: var(---black-clr);
+}
+
+}
